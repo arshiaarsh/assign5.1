@@ -1,0 +1,56 @@
+abstract class Figure
+{
+  double dim1=10;
+  abstract void findArea();
+  abstract void findPerimeter();
+}
+class Circle extends Figure
+{
+void findArea()
+{
+System.out.println(3.14*dim1*dim1);
+}
+void findPerimeter()
+{
+System.out.println(2*3.14*dim1);
+}
+}
+class Rectangle extends Figure
+{
+int a=10,b=20;
+void findArea()
+{
+System.out.println(a*b);
+}
+void findPerimeter()
+{
+System.out.println(2*(a+b));
+}
+}
+class Triangle  extends Figure
+{
+int a=10,b=20,c=30,h=40;
+void findArea()
+{
+System.out.println((b*h)/2);
+}
+void findPerimeter()
+{
+System.out.println(a+b+c);
+}
+}
+class A
+{
+public static void main(String args[])
+{
+Circle obj1=new Circle();
+obj1.findArea();
+obj1.findPerimeter();
+Rectangle obj2=new Rectangle();
+obj2.findArea();
+obj2.findPerimeter();
+Triangle obj3=new Triangle();
+obj3.findArea();
+obj3.findPerimeter();
+}
+}
